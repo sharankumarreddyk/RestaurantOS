@@ -1,0 +1,148 @@
+/* ═══════════════════════════════════════════════════════
+   Template-specific styles applied via class on wrapper.
+   Each template overrides card, background, typography,
+   and border styles for the customer-facing menu.
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Modern Minimalist (default) ─────────────────────── */
+.template-modern_minimalist {
+  --card-radius: 0.75rem;
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  --card-border: none;
+  --page-bg: #f9fafb;
+  --card-bg: #ffffff;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --heading-font: var(--font-brand);
+  --heading-weight: 600;
+  --category-radius: 9999px;
+}
+
+/* ── Classic Elegant ─────────────────────────────────── */
+.template-classic_elegant {
+  --card-radius: 0.5rem;
+  --card-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  --card-border: 1px solid var(--color-accent, #c89b3c);
+  --page-bg: #fdf6e3;
+  --card-bg: #fffdf7;
+  --text-primary: #2c1810;
+  --text-secondary: #6b5c52;
+  --heading-font: 'Playfair Display', serif;
+  --heading-weight: 600;
+  --category-radius: 0.5rem;
+}
+.template-classic_elegant .menu-item-card {
+  border: 1px solid rgba(200,155,60,0.2);
+}
+
+/* ── Vibrant Colorful ────────────────────────────────── */
+.template-vibrant_colorful {
+  --card-radius: 1rem;
+  --card-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  --card-border: none;
+  --page-bg: #faf5ff;
+  --card-bg: #ffffff;
+  --text-primary: #1e1b4b;
+  --text-secondary: #6366f1;
+  --heading-font: var(--font-brand);
+  --heading-weight: 700;
+  --category-radius: 9999px;
+}
+.template-vibrant_colorful .menu-item-card {
+  background: linear-gradient(135deg, #ffffff 0%, #faf5ff 100%);
+}
+.template-vibrant_colorful .category-tab-active {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+}
+
+/* ── Fast Food Casual ────────────────────────────────── */
+.template-fast_food_casual {
+  --card-radius: 0.75rem;
+  --card-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  --card-border: none;
+  --page-bg: #ffffff;
+  --card-bg: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  --heading-font: var(--font-brand);
+  --heading-weight: 800;
+  --category-radius: 0.5rem;
+}
+.template-fast_food_casual .menu-item-name {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+}
+.template-fast_food_casual .menu-item-price {
+  color: var(--color-accent);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+/* ── Fine Dining Premium ─────────────────────────────── */
+.template-fine_dining_premium {
+  --card-radius: 0.375rem;
+  --card-shadow: 0 0 20px rgba(200,155,60,0.08);
+  --card-border: 1px solid rgba(200,155,60,0.15);
+  --page-bg: #111111;
+  --card-bg: #1a1a1a;
+  --text-primary: #f5f5f5;
+  --text-secondary: #a3a3a3;
+  --heading-font: 'Playfair Display', serif;
+  --heading-weight: 400;
+  --category-radius: 0.25rem;
+}
+.template-fine_dining_premium .menu-item-card {
+  border: 1px solid rgba(200,155,60,0.12);
+}
+.template-fine_dining_premium .brand-header {
+  background: #0a0a0a;
+  border-bottom: 1px solid rgba(200,155,60,0.2);
+}
+.template-fine_dining_premium .search-bar {
+  background: #222222;
+  color: #f5f5f5;
+  border: 1px solid #333;
+}
+.template-fine_dining_premium .category-tab {
+  background: #222222;
+  color: #a3a3a3;
+}
+.template-fine_dining_premium .category-tab-active {
+  background: var(--color-accent, #c89b3c);
+  color: #0a0a0a;
+}
+.template-fine_dining_premium .cart-bar {
+  background: #0a0a0a;
+  border-top: 1px solid rgba(200,155,60,0.3);
+}
+
+/* ── Shared Utility Classes ──────────────────────────── */
+
+.brand-page {
+  background-color: var(--page-bg, #f9fafb);
+  color: var(--text-primary, #111827);
+  min-height: 100vh;
+}
+
+.menu-item-card {
+  background-color: var(--card-bg, #ffffff);
+  border-radius: var(--card-radius, 0.75rem);
+  box-shadow: var(--card-shadow, 0 1px 3px rgba(0,0,0,0.08));
+  border: var(--card-border, none);
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.menu-item-card:active {
+  transform: scale(0.98);
+}
+
+.brand-heading {
+  font-family: var(--heading-font, var(--font-brand));
+  font-weight: var(--heading-weight, 600);
+}
+
+.text-muted {
+  color: var(--text-secondary, #6b7280);
+}
